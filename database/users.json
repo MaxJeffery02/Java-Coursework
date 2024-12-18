@@ -1,0 +1,89 @@
+[
+  {
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "ADMIN",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "Blueteq",
+    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "Blueteq",
+    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "Blueteq",
+    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "Blueteq",
+    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "Blueteq",
+    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  }
+]
