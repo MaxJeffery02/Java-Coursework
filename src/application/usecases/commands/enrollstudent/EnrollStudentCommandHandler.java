@@ -1,10 +1,12 @@
-package application.usecases.commands.enroll;
+package application.usecases.commands.enrollstudent;
 
 import java.util.UUID;
 
 import application.abstractions.Validator;
+import domain.entities.Course;
 import domain.entities.Student;
 import application.results.Result;
+import domain.enums.HttpStatusCode;
 import domain.valueobjects.Password;
 import application.results.ErrorResult;
 import application.results.SuccessResult;
@@ -32,12 +34,19 @@ public final class EnrollStudentCommandHandler implements CommandHandler<EnrollS
 
         // Early return if validation fails
         if(validationResult.isFailure()){
-            ErrorResult<?> errorResult = (ErrorResult<?>) validationResult;
-            return new ErrorResult<>(errorResult.getMessage(), errorResult.getStatusCode());
+            return new ErrorResult<>(
+                    validationResult.getMessageFromErrorResult(),
+                    validationResult.getStatusCodeFromErrorResult());
         }
 
         // Change this to generate random password
         Password password = PASSWORD_SERVICE.generate(command.password());
+
+        Course course = DB_CONTEXT.getCourses().firstOrDefault(c -> c.getId().equals(command.courseId()));
+
+        if(course == null){
+            return new ErrorResult<>("Course does not exist", HttpStatusCode.NOT_FOUND);
+        }
 
         // Try and create student
         Result<Student> createStudentResult = Student.create(
@@ -45,7 +54,7 @@ public final class EnrollStudentCommandHandler implements CommandHandler<EnrollS
                 command.lastName(),
                 password,
                 command.dateOfBirth(),
-                command.courseId(),
+                course,
                 command.type(),
                 command.employer(),
                 command.country()
@@ -53,8 +62,9 @@ public final class EnrollStudentCommandHandler implements CommandHandler<EnrollS
 
         // Early return if any of the business rules failed
         if(createStudentResult.isFailure()){
-            ErrorResult<Student> errorResult = (ErrorResult<Student>) createStudentResult;
-            return new ErrorResult<>(errorResult.getMessage(), errorResult.getStatusCode());
+            return new ErrorResult<>(
+                    createStudentResult.getMessageFromErrorResult(),
+                    createStudentResult.getStatusCodeFromErrorResult());
         }
 
         // Get student from the result

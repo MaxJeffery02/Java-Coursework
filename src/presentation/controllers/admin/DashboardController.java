@@ -1,20 +1,21 @@
-package presentation.controllers;
+package presentation.controllers.admin;
 
 import application.dtos.StudentDto;
 import application.results.Result;
-import application.usecases.queries.getstudents.GetStudentsQuery;
-import application.usecases.queries.getstudents.GetStudentsQueryHandler;
-import javafx.beans.property.SimpleStringProperty;
+import application.usecases.queries.getallstudents.GetAllStudentsQuery;
+import application.usecases.queries.getallstudents.GetAllStudentsQueryHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import presentation.Main;
 
 import java.util.List;
 
-public class AdminDashboardController {
+public final class DashboardController {
 
     // Students Table
     @FXML
@@ -25,6 +26,9 @@ public class AdminDashboardController {
     private TableColumn<StudentDto, String> studentLastNameColumn;
     @FXML
     private TableColumn<StudentDto, String> studentCourseColumn;
+
+    @FXML
+    private Button addStudentButton;
 
     @FXML
     public void initialize() {
@@ -38,8 +42,8 @@ public class AdminDashboardController {
 
     private ObservableList<StudentDto> getStudentsData() {
         // Create the query and handler
-        GetStudentsQuery query = new GetStudentsQuery();
-        GetStudentsQueryHandler handler = new GetStudentsQueryHandler();
+        GetAllStudentsQuery query = new GetAllStudentsQuery();
+        GetAllStudentsQueryHandler handler = new GetAllStudentsQueryHandler();
 
         // Handle the query and process the result
         Result<List<StudentDto>> result = handler.handle(query);
@@ -50,5 +54,10 @@ public class AdminDashboardController {
         }
 
         return FXCollections.observableArrayList(result.getData());
+    }
+
+    @FXML
+    private void handleAddStudentAction() {
+        Main.switchView("students/add");
     }
 }

@@ -20,7 +20,7 @@ public final class GetTutorsCoursesQueryHandler implements QueryHandler<GetTutor
 
         List<CourseDto> courses = DB_CONTEXT.getCourses()
                 .where(c -> query.courses().contains(c.getId()))
-                .map(c -> new CourseDto(c.getName()));
+                .map(c -> new CourseDto(c.getId(), c.getName()));
 
         return new SuccessResult<>(courses);
     }

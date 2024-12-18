@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1f36f0f5-869d-4297-93a7-c3d3cd1dbed6",
+    "name": "Mathematics"
+  },
+  {
+    "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d",
+    "name": "Computer Science"
+  },
+  {
+    "id": "b13e3a0e-e43f-4edb-9311-4d63d5008c9c",
+    "name": "Physics"
+  },
+  {
+    "id": "9f5b2d8a-9b6e-4552-a00f-4e6b84f1c0ae",
+    "name": "Chemistry"
+  },
+  {
+    "id": "a07c6f7b-920f-46f9-b7d3-303227a6b02e",
+    "name": "Biology"
+  },
+  {
+    "id": "3ab5d7d2-3f28-470d-97b2-63be4728b16a",
+    "name": "Engineering"
+  },
+  {
+    "id": "d98c68d5-0135-43a7-91ae-f9259d0d72e4",
+    "name": "Statistics"
+  },
+  {
+    "id": "3fa4fe79-9df8-4ff0-94d1-2cd90d9023b0",
+    "name": "Economics"
+  },
+  {
+    "id": "c44e2080-72f7-462a-bfb5-7d2cf1a9e5b4",
+    "name": "Literature"
+  },
+  {
+    "id": "f39d33e0-f535-4e1f-bc66-f1e315db5e55",
+    "name": "History"
+  }
+]

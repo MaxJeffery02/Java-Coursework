@@ -10,8 +10,8 @@ public class ForeignExchange extends Student {
 
     private String country;
 
-    protected ForeignExchange(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, UUID courseId, String country) {
-        super(username, firstName, lastName, password, dateOfBirth, studentType, courseId);
+    protected ForeignExchange(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, Course course, String country) {
+        super(username, firstName, lastName, password, dateOfBirth, studentType, course);
         this.country = country;
     }
 

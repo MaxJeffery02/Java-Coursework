@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.students.AddStudentController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <GridPane hgap="10" vgap="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <!-- First Name -->
+        <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Last Name -->
+        <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Password -->
+        <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Date of Birth -->
+        <Label text="Date of Birth:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dobPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Course -->
+        <Label text="Course:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="courseComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Student Type -->
+        <Label text="Student Type:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="studentTypeCombo" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <HBox fx:id="employerBox" visible="false">
+            <TextField fx:id="employerField" promptText="Employer" />
+        </HBox>
+
+        <!-- HBox for Country field (visible only if Foreign Exchange) -->
+        <HBox fx:id="countryBox" visible="false">
+            <TextField fx:id="countryField" promptText="Country" />
+        </HBox>
+
+        <!-- Submit Button -->
+        <Button text="Enroll" fx:id="enrollButton" GridPane.rowIndex="8" GridPane.columnIndex="1" onAction="#handleEnrollAction"/>
+    </GridPane>
+
+</AnchorPane>

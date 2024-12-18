@@ -2,7 +2,6 @@ package domain.enums;
 
 public enum StudentType {
     FULL_TIME("Full time"),
-    PART_TIME("Part time"),
     APPRENTICE("Apprentice"),
     FOREIGN_EXCHANGE("Foreign exchange");
 
@@ -18,6 +17,6 @@ public enum StudentType {
 
     @Override
     public String toString() {
-        return "StudentType{}";
+        return name;
     }
 }

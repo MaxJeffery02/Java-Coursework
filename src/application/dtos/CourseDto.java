@@ -1,4 +1,6 @@
 package application.dtos;
 
-public record CourseDto(String name) {
+import java.util.UUID;
+
+public record CourseDto(UUID id, String name) {
 }

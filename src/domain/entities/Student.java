@@ -15,7 +15,7 @@ import domain.valueobjects.Password;
 
 public class Student extends User {
 
-    private UUID courseId;
+    private Course course;
     private StudentType studentType;
 
     protected Student(
@@ -25,22 +25,22 @@ public class Student extends User {
             Password password,
             LocalDate dateOfBirth,
             StudentType studentType,
-            UUID courseId) {
+            Course course) {
         super(username, password, firstName, lastName, dateOfBirth, UserType.STUDENT);
         this.studentType = studentType;
-        this.courseId = courseId;
+        this.course = course;
     }
 
     public StudentType getStudentType() {
         return studentType;
     }
 
-    public UUID getCourseId() {
-        return courseId;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setCourseId(UUID courseId) {
-        this.courseId = courseId;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     public void setStudentType(StudentType studentType) {
@@ -52,7 +52,7 @@ public class Student extends User {
             String lastName,
             Password password,
             LocalDate dateOfBirth,
-            UUID courseId,
+            Course course,
             StudentType type,
             String employer,
             String country) {
@@ -64,9 +64,9 @@ public class Student extends User {
         String username = UserHelper.generateUsername(firstName, lastName);
 
         Student student = switch (type) {
-            case FOREIGN_EXCHANGE -> new ForeignExchange(username, firstName, lastName, password, dateOfBirth, type, courseId, country);
-            case APPRENTICE -> new Apprentice(username, firstName, lastName, password, dateOfBirth, type, courseId, employer);
-            default -> new FullTimeStudent(username, firstName, lastName, password, dateOfBirth, type, courseId);
+            case FOREIGN_EXCHANGE -> new ForeignExchange(username, firstName, lastName, password, dateOfBirth, type, course, country);
+            case APPRENTICE -> new Apprentice(username, firstName, lastName, password, dateOfBirth, type, course, employer);
+            default -> new FullTimeStudent(username, firstName, lastName, password, dateOfBirth, type, course);
         };
 
         return new SuccessResult<>(student);

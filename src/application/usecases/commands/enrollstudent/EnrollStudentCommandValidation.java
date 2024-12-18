@@ -1,4 +1,4 @@
-package application.usecases.commands.enroll;
+package application.usecases.commands.enrollstudent;
 
 import domain.enums.HttpStatusCode;
 import application.abstractions.Validator;

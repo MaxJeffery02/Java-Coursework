@@ -1,4 +1,4 @@
-package application.usecases.commands.enroll;
+package application.usecases.commands.enrollstudent;
 
 import java.util.UUID;
 import java.time.LocalDate;

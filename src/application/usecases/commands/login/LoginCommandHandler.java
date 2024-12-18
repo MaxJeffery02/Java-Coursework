@@ -74,7 +74,7 @@ public final class LoginCommandHandler implements CommandHandler<LoginCommand, L
 
         // Add student claims if user is a student
         if(user instanceof Student student){
-            claims.add(new Claim(ClaimTypes.COURSE_ID, student.getCourseId().toString()));
+            claims.add(new Claim(ClaimTypes.COURSE_ID, student.getCourse().getId().toString()));
             claims.add(new Claim(ClaimTypes.STUDENT_TYPE, student.getStudentType().toString()));
         }
 

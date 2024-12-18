@@ -7,7 +7,7 @@ import domain.enums.StudentType;
 import domain.valueobjects.Password;
 
 public class FullTimeStudent extends Student {
-    protected FullTimeStudent(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, UUID courseId) {
-        super(username, firstName, lastName, password, dateOfBirth, studentType, courseId);
+    protected FullTimeStudent(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, Course course) {
+        super(username, firstName, lastName, password, dateOfBirth, studentType, course);
     }
 }

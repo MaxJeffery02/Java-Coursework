@@ -9,8 +9,8 @@ public class Apprentice extends Student {
 
     private String employer;
 
-    protected Apprentice(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, UUID courseId, String employer) {
-        super(username, firstName, lastName, password, dateOfBirth, studentType, courseId);
+    protected Apprentice(String username, String firstName, String lastName, Password password, LocalDate dateOfBirth, StudentType studentType, Course course, String employer) {
+        super(username, firstName, lastName, password, dateOfBirth, studentType, course);
         this.employer = employer;
     }
 

@@ -4,9 +4,8 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="presentation.controllers.LoginController"
-            prefHeight="400.0" prefWidth="600.0"
-            stylesheets="presentation/css/login.css">
+            fx:controller="presentation.controllers.authentication.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
 
     <!-- Center VBox for form -->
     <VBox layoutX="200.0" layoutY="100.0" spacing="10.0" alignment="CENTER">

@@ -12,78 +12,38 @@
     "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
   },
   {
-    "employer": "Blueteq",
-    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
-    "studentType": "APPRENTICE",
-    "username": "MJEFFER",
-    "firstName": "Max",
-    "lastName": "Jeffery",
-    "type": "STUDENT",
-    "dateOfBirth": "2002-11-16",
-    "password": {
-      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
-      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    "employer": "IDK",
+    "course": {
+      "name": "Computer Science",
+      "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d"
     },
-    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+    "studentType": "APPRENTICE",
+    "username": "JCARR",
+    "firstName": "James",
+    "lastName": "Carr",
+    "type": "STUDENT",
+    "dateOfBirth": "2001-12-05",
+    "password": {
+      "hash": "G8ITd/HokFID0lTgqEFuUartlIMeulX/yhFPkcrvZZKzeew7xdDSyupzGuPdaGdI1IQA99cy4nSMxZ7v22vSFg\u003d\u003d",
+      "salt": "ADcQlekZloi5E1GyPyeWcw\u003d\u003d"
+    },
+    "id": "e3474d36-279d-4b04-ab42-137d3978c832"
   },
   {
-    "employer": "Blueteq",
-    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
-    "studentType": "APPRENTICE",
-    "username": "MJEFFER",
-    "firstName": "Max",
-    "lastName": "Jeffery",
-    "type": "STUDENT",
-    "dateOfBirth": "2002-11-16",
-    "password": {
-      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
-      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    "course": {
+      "name": "Economics",
+      "id": "3fa4fe79-9df8-4ff0-94d1-2cd90d9023b0"
     },
-    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
-  },
-  {
-    "employer": "Blueteq",
-    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
-    "studentType": "APPRENTICE",
-    "username": "MJEFFER",
-    "firstName": "Max",
-    "lastName": "Jeffery",
+    "studentType": "FULL_TIME",
+    "username": "RDAVID",
+    "firstName": "Ralph",
+    "lastName": "David",
     "type": "STUDENT",
-    "dateOfBirth": "2002-11-16",
+    "dateOfBirth": "1997-03-14",
     "password": {
-      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
-      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+      "hash": "ppXfQFC6e86aWaUnO8GwwmOrgLUeFziPGQG4BHLvlmFLYbHiSJ3Z+wweasVDKFOwyXtTO/pD7+8sIa91761CNg\u003d\u003d",
+      "salt": "nnEUqetu+0uCo3qFb5Ajhg\u003d\u003d"
     },
-    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
-  },
-  {
-    "employer": "Blueteq",
-    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
-    "studentType": "APPRENTICE",
-    "username": "MJEFFER",
-    "firstName": "Max",
-    "lastName": "Jeffery",
-    "type": "STUDENT",
-    "dateOfBirth": "2002-11-16",
-    "password": {
-      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
-      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
-    },
-    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
-  },
-  {
-    "employer": "Blueteq",
-    "courseId": "1f69d639-35f0-4255-92ad-3bd0c67ebf76",
-    "studentType": "APPRENTICE",
-    "username": "MJEFFER",
-    "firstName": "Max",
-    "lastName": "Jeffery",
-    "type": "STUDENT",
-    "dateOfBirth": "2002-11-16",
-    "password": {
-      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
-      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
-    },
-    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+    "id": "e55afbda-ed65-472e-982c-f9a8f2dbd172"
   }
 ]
