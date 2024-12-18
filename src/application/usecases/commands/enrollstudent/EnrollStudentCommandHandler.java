@@ -39,11 +39,14 @@ public final class EnrollStudentCommandHandler implements CommandHandler<EnrollS
                     validationResult.getStatusCodeFromErrorResult());
         }
 
-        // Change this to generate random password
-        Password password = PASSWORD_SERVICE.generate(command.password());
+        // Generate random password and hash it
+        String plainTextPassword = PASSWORD_SERVICE.generateRandom(12);
+        Password password = PASSWORD_SERVICE.generate(plainTextPassword);
 
+        // Get course by id
         Course course = DB_CONTEXT.getCourses().firstOrDefault(c -> c.getId().equals(command.courseId()));
 
+        // Early return if the course does not exist
         if(course == null){
             return new ErrorResult<>("Course does not exist", HttpStatusCode.NOT_FOUND);
         }
@@ -72,6 +75,9 @@ public final class EnrollStudentCommandHandler implements CommandHandler<EnrollS
 
         // Save the user to the users json file
         DB_CONTEXT.getUsers().add(student);
+
+        // Mock send a welcome email to the student
+        student.sendWelcomeEmail(plainTextPassword);
 
         // Return success result
         return new SuccessResult<>(student.getId());

@@ -73,4 +73,8 @@ public class User extends Entity {
             case TUTOR -> "tutor/dashboard";
         };
     }
+
+    public String getEmail() {
+        return getUsername() + "@fake.uni.co.uk";
+    }
 }

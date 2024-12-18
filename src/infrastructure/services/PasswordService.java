@@ -13,6 +13,7 @@ public class PasswordService {
     private static final int SALT_LENGTH = 16; // 16 bytes for salt
     private static final int HASH_LENGTH = 64; // 64 bytes for hash
     private static final int ITERATIONS = 10000;
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
 
     /**
      * Generates a Password value object containing the hash and salt.
@@ -36,6 +37,27 @@ public class PasswordService {
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             throw new RuntimeException("Error while generating password", e);
         }
+    }
+
+    /**
+     * Generates a random password of the specified length using a secure random generator.
+     * The password can include uppercase and lowercase letters, numbers, and special characters.
+     *
+     * @param length The length of the random password to generate.
+     * @return A randomly generated password as a string.
+     */
+    public String generateRandom(int length) {
+
+        SecureRandom random = new SecureRandom();
+        StringBuilder password = new StringBuilder(length);
+
+        // Generate a random password character by character
+        for (int i = 0; i < length; i++) {
+            int randomIndex = random.nextInt(CHARACTERS.length());
+            password.append(CHARACTERS.charAt(randomIndex));
+        }
+
+        return password.toString();
     }
 
     /**

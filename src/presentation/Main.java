@@ -52,10 +52,11 @@ public class Main extends Application {
         URL view = Main.class.getResource("../presentation/views/" + viewName + ".fxml");
 
         // If the FXML file doesn't exist, throw a ViewNotFoundException
-        if(view == null) throw new ViewNotFoundException(viewName);
+        if(view == null) view = Main.class.getResource("../presentation/views/errors/notFound.fxml");
 
         try {
             // Load the FXML file into a Parent object (the root of the scene graph)
+            assert view != null;
             Parent root = FXMLLoader.load(view);
 
             // Create a new Scene with the loaded root element and set the desired size
@@ -69,8 +70,7 @@ public class Main extends Application {
             primaryStage.show();
 
         } catch (IOException e) {
-            // If there is an IOException, rethrow it as a runtime exception
-            throw new RuntimeException(e);
+            return;
         }
     }
 

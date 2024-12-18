@@ -8,7 +8,6 @@ import application.abstractions.Command;
 public record EnrollStudentCommand(
         String firstName,
         String lastName,
-        String password,
         LocalDate dateOfBirth,
         UUID courseId,
         String employer,

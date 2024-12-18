@@ -27,9 +27,6 @@ public class AddStudentController {
     private TextField lastNameField;
 
     @FXML
-    private PasswordField passwordField;
-
-    @FXML
     private DatePicker dobPicker;
 
     @FXML
@@ -155,7 +152,6 @@ public class AddStudentController {
     private EnrollStudentCommand mapCommand() {
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
-        String password = passwordField.getText();
         LocalDate dateOfBirth = dobPicker.getValue();
         CourseDto selectedCourse = courseComboBox.getValue();
         String employer = employerField.getText();
@@ -166,7 +162,6 @@ public class AddStudentController {
         return new EnrollStudentCommand(
                 firstName,
                 lastName,
-                password,
                 dateOfBirth,
                 selectedCourse.id(),
                 employer,
@@ -182,7 +177,6 @@ public class AddStudentController {
     private void clearForm() {
         firstNameField.clear();
         lastNameField.clear();
-        passwordField.clear();
         dobPicker.setValue(null);
         courseComboBox.getSelectionModel().clearSelection();
         employerField.clear();

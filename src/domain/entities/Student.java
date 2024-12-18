@@ -47,6 +47,23 @@ public class Student extends User {
         this.studentType = studentType;
     }
 
+    /**
+     * Mock method for sending a welcome email to a student
+     */
+    public void sendWelcomeEmail(String plainTextPassword) {
+        String subject = "Welcome " + getFirstName() + "!";
+
+        String body = "You have been enrolled on " + getCourse().getName();
+        body += "Your login details are listed below:";
+        body += "Username: " + getUsername();
+        body += "Password: " + plainTextPassword;
+
+        String to = getEmail();
+        String from = "enrollment@fake.uni.co.uk";
+
+        // Send email...
+    }
+
     public static Result<Student> create(
             String firstName,
             String lastName,
