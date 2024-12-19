@@ -16,11 +16,6 @@ public class EnrollStudentCommandValidation extends Validator<EnrollStudentComma
                 .withMessage("Last name is required")
                 .withStatusCode(HttpStatusCode.BAD_REQUEST);
 
-        ruleFor(EnrollStudentCommand::password)
-                .notEmpty()
-                .withMessage("Password is required")
-                .withStatusCode(HttpStatusCode.BAD_REQUEST);
-
         ruleFor(EnrollStudentCommand::type)
                 .notEmpty()
                 .withMessage("Student type is required")

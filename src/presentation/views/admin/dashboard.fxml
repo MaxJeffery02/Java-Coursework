@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
 
-<TabPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" prefHeight="600.0" prefWidth="800.0" fx:controller="presentation.controllers.admin.DashboardController">
-    <tabs>
-        <Tab text="Courses" closable="false">
-            <AnchorPane>
-                <GridPane layoutX="10.0" layoutY="10.0" hgap="10.0" vgap="10.0">
-                    <Label text="Courses Grid Content Here" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                </GridPane>
-            </AnchorPane>
-        </Tab>
-        <Tab text="Tutors" closable="false">
-            <AnchorPane>
-                <GridPane layoutX="10.0" layoutY="10.0" hgap="10.0" vgap="10.0">
-                    <Label text="Tutors Grid Content Here" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                </GridPane>
-            </AnchorPane>
-        </Tab>
-        <Tab text="Students" closable="false">
-            <AnchorPane>
-                <GridPane layoutX="10.0" layoutY="10.0" hgap="10.0" vgap="10.0">
-                    <TableView fx:id="studentsTable" layoutX="10.0" layoutY="10.0" prefWidth="780.0" prefHeight="580.0">
-                        <columns>
-                            <TableColumn fx:id="studentFirstNameColumn" text="First Name" prefWidth="200.0"/>
-                            <TableColumn fx:id="studentLastNameColumn" text="Last Name" prefWidth="200.0"/>
-                            <TableColumn fx:id="studentCourseColumn" text="Course" prefWidth="200.0"/>
-                        </columns>
-                    </TableView>
-                </GridPane>
-                <Button fx:id="addStudentButton" text="Add Student" layoutX="10.0" layoutY="10.0"
-                        onAction="#handleAddStudentAction"/>
-            </AnchorPane>
-        </Tab>
-    </tabs>
-</TabPane>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label text="Dashboard">Dashboard</Label>
+</AnchorPane>

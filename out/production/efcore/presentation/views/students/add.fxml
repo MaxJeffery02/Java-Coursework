@@ -17,10 +17,6 @@
         <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
         <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
-        <!-- Password -->
-        <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-        <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-
         <!-- Date of Birth -->
         <Label text="Date of Birth:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
         <DatePicker fx:id="dobPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
@@ -33,11 +29,12 @@
         <Label text="Student Type:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
         <ComboBox fx:id="studentTypeCombo" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
 
+        <!-- Employer -->
         <HBox fx:id="employerBox" visible="false">
             <TextField fx:id="employerField" promptText="Employer" />
         </HBox>
 
-        <!-- HBox for Country field (visible only if Foreign Exchange) -->
+        <!-- Country -->
         <HBox fx:id="countryBox" visible="false">
             <TextField fx:id="countryField" promptText="Country" />
         </HBox>

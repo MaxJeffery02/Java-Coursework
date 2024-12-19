@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.application.Application;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import presentation.controllers.shared.LayoutController;
 
 public class Main extends Application {
 
@@ -48,31 +49,38 @@ public class Main extends Application {
      */
     public static void switchView(String viewName) throws ViewNotFoundException {
 
-        // Construct the URL to the FXML file based on the viewName parameter
-        URL view = Main.class.getResource("../presentation/views/" + viewName + ".fxml");
+        // URL to the layout and the target view
+        URL layoutURL = Main.class.getResource("../presentation/views/shared/layout.fxml");
+        URL viewURL = Main.class.getResource("../presentation/views/" + viewName + ".fxml");
 
-        // If the FXML file doesn't exist, throw a ViewNotFoundException
-        if(view == null) view = Main.class.getResource("../presentation/views/errors/notFound.fxml");
+        if (layoutURL == null || viewURL == null) {
+            viewURL = Main.class.getResource("../presentation/views/errors/notFound.fxml");
+        }
 
         try {
-            // Load the FXML file into a Parent object (the root of the scene graph)
-            assert view != null;
-            Parent root = FXMLLoader.load(view);
+            // Load the layout FXML
+            FXMLLoader layoutLoader = new FXMLLoader(layoutURL);
+            Parent layoutRoot = layoutLoader.load();
 
-            // Create a new Scene with the loaded root element and set the desired size
-            Scene scene = new Scene(root, 600, 400);
+            // Load the target view FXML
+            FXMLLoader viewLoader = new FXMLLoader(viewURL);
+            Parent viewContent = viewLoader.load();
 
-            // Set the scene on the primary stage and set the window's title
+            // Inject the target view into the layout
+            LayoutController layoutController = layoutLoader.getController();
+            layoutController.setContent(viewContent);
+
+            // Set the scene with the layout
+            Scene scene = new Scene(layoutRoot, 800, 600);
             primaryStage.setScene(scene);
             primaryStage.setTitle(viewName.toLowerCase());
-
-            // Show the primary stage (window) with the new scene
             primaryStage.show();
 
         } catch (IOException e) {
-            return;
+            e.printStackTrace();
         }
     }
+
 
     /**
      * The main method is the entry point for the JavaFX application.

@@ -28,15 +28,15 @@ public class StudentDtoMapper implements Mapper<User, StudentDto> {
     public StudentDto map(User user) {
         // Check if the user is a Student
         if(user instanceof Student student){
+
             // Extract additional details based on the type of student
-            String employer = student instanceof Apprentice ? ((Apprentice) student).getEmployer() : "";
-            String country = student instanceof ForeignExchange ? ((ForeignExchange) student).getCountry() : "";
+            String employer = student instanceof Apprentice ? ((Apprentice) student).getEmployer() : "N/A";
+            String country = student instanceof ForeignExchange ? ((ForeignExchange) student).getCountry() : "N/A";
 
             // Return a new StudentDto with the mapped data
             return new StudentDto(
                     student.getFirstName(),
                     student.getLastName(),
-                    student.getUsername(),
                     student.getCourse().getName(),
                     student.getStudentType().toString(),
                     employer,

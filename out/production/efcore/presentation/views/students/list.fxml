@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.students.StudentListController"
+            prefHeight="400.0" prefWidth="600.0">
+    <GridPane layoutX="10.0" layoutY="10.0" hgap="10.0" vgap="10.0">
+        <TableView fx:id="studentsTable" layoutX="10.0" layoutY="10.0" prefWidth="1200.0" prefHeight="600.0">
+            <columns>
+                <TableColumn fx:id="studentFirstNameColumn" text="First Name" prefWidth="200.0"/>
+                <TableColumn fx:id="studentLastNameColumn" text="Last Name" prefWidth="200.0"/>
+                <TableColumn fx:id="studentCourseColumn" text="Course" prefWidth="200.0"/>
+                <TableColumn fx:id="studentTypeColumn" text="Type" prefWidth="200.0"/>
+                <TableColumn fx:id="studentEmployerColumn" text="Employer" prefWidth="200.0"/>
+                <TableColumn fx:id="studentCountryColumn" text="Country" prefWidth="200.0"/>
+            </columns>
+        </TableView>
+    </GridPane>
+</AnchorPane>

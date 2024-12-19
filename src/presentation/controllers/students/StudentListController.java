@@ -1,21 +1,19 @@
-package presentation.controllers.admin;
+package presentation.controllers.students;
 
 import application.dtos.StudentDto;
 import application.results.Result;
 import application.usecases.queries.getallstudents.GetAllStudentsQuery;
 import application.usecases.queries.getallstudents.GetAllStudentsQueryHandler;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import presentation.Main;
 
 import java.util.List;
 
-public final class DashboardController {
+public class StudentListController {
 
     // Students Table
     @FXML
@@ -26,16 +24,22 @@ public final class DashboardController {
     private TableColumn<StudentDto, String> studentLastNameColumn;
     @FXML
     private TableColumn<StudentDto, String> studentCourseColumn;
-
     @FXML
-    private Button addStudentButton;
+    private TableColumn<StudentDto, String> studentTypeColumn;
+    @FXML
+    private TableColumn<StudentDto, String> studentEmployerColumn;
+    @FXML
+    private TableColumn<StudentDto, String> studentCountryColumn;
 
     @FXML
     public void initialize() {
         // Initialize Students Table
-        studentFirstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
-        studentLastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-        studentCourseColumn.setCellValueFactory(new PropertyValueFactory<>("course"));
+        studentFirstNameColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().firstName()));
+        studentLastNameColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().lastName()));
+        studentCourseColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().course()));
+        studentTypeColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().type()));
+        studentCountryColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().country()));
+        studentEmployerColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().employer()));
 
         studentsTable.setItems(getStudentsData());
     }
@@ -49,15 +53,9 @@ public final class DashboardController {
         Result<List<StudentDto>> result = handler.handle(query);
 
         if (result.isFailure()) {
-            System.err.println("Error fetching students: " + result.getMessageFromErrorResult());
             return FXCollections.observableArrayList();
         }
 
         return FXCollections.observableArrayList(result.getData());
-    }
-
-    @FXML
-    private void handleAddStudentAction() {
-        Main.switchView("students/add");
     }
 }
