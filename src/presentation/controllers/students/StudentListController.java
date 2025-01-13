@@ -23,6 +23,8 @@ public class StudentListController {
     @FXML
     private TableColumn<StudentDto, String> studentLastNameColumn;
     @FXML
+    private TableColumn<StudentDto, String> studentEmailColumn;
+    @FXML
     private TableColumn<StudentDto, String> studentCourseColumn;
     @FXML
     private TableColumn<StudentDto, String> studentTypeColumn;
@@ -40,6 +42,7 @@ public class StudentListController {
         studentTypeColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().type()));
         studentCountryColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().country()));
         studentEmployerColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().employer()));
+        studentEmailColumn.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().email()));
 
         studentsTable.setItems(getStudentsData());
     }

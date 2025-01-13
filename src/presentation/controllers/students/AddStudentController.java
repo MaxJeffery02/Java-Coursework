@@ -112,16 +112,23 @@ public class AddStudentController {
      */
     private void handleStudentTypeChange(StudentType newStudentType) {
         if (newStudentType == StudentType.APPRENTICE) {
-            employerBox.setVisible(true);  // Show employer field if the student is an apprentice
-            countryBox.setVisible(false);  // Hide country field
-        } else if (newStudentType == StudentType.FOREIGN_EXCHANGE) {
-            employerBox.setVisible(false);  // Hide employer field
-            countryBox.setVisible(true);   // Show country field for foreign exchange students
-        } else {
-            employerBox.setVisible(false);  // Hide both fields if student type is neither
+            employerBox.setVisible(true);
+            employerBox.setManaged(true);
             countryBox.setVisible(false);
+            countryBox.setManaged(false);
+        } else if (newStudentType == StudentType.FOREIGN_EXCHANGE) {
+            employerBox.setVisible(false);
+            employerBox.setManaged(false);
+            countryBox.setVisible(true);
+            countryBox.setManaged(true);
+        } else {
+            employerBox.setVisible(false);
+            employerBox.setManaged(false);
+            countryBox.setVisible(false);
+            countryBox.setManaged(false);
         }
     }
+
 
     /**
      * Handle the enrollment button click event.
@@ -137,7 +144,7 @@ public class AddStudentController {
         EnrollStudentCommandHandler handler = new EnrollStudentCommandHandler();
         Result<UUID> result = handler.handle(command);
 
-        // Handle the result of the enrollment (this part can be expanded further)
+        // Handle the result of the enrollment
         if (result.isFailure()) {
             AlertHelper.show("Failed to enroll student", result.getMessageFromErrorResult(), Alert.AlertType.ERROR);
         } else {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.tutors.AddTutorController"
+            prefHeight="450.0" prefWidth="600.0">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Title Section -->
+        <Label text="Add New Tutor" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+        <!-- Form Section -->
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+
+            <!-- First Name -->
+            <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="250"/>
+
+            <!-- Last Name -->
+            <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="250"/>
+
+            <!-- Date of Birth -->
+            <Label text="Date of Birth:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <DatePicker fx:id="dobPicker" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="250"/>
+
+            <!-- Course -->
+            <Label text="Course(s) Taught:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <ListView fx:id="courseListView" GridPane.rowIndex="3" GridPane.columnIndex="1" prefHeight="250" prefWidth="250"/>
+
+        </GridPane>
+
+        <Label text="Ctrl + Click to select multiple courses." style="-fx-font-size: 12; -fx-text-fill: gray;"/>
+
+        <!-- Submit Button -->
+        <Button text="Add Tutor" onAction="#handleTutorCreationAction" fx:id="addButton" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
+
+    </VBox>
+
+</AnchorPane>

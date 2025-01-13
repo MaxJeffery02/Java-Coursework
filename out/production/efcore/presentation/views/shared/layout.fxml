@@ -4,17 +4,11 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="presentation.controllers.shared.LayoutController">
     <top>
-        <MenuBar fx:id="menuBar" />
         <HBox style="-fx-background-color: #336699; -fx-padding: 10;">
-            <Label text="Application Header" style="-fx-text-fill: white;"/>
+            <MenuBar fx:id="menuBar" />
         </HBox>
     </top>
     <center>
         <StackPane fx:id="contentPane" />
     </center>
-    <bottom>
-        <HBox style="-fx-background-color: #336699; -fx-padding: 10;">
-            <Label text="Application Footer" style="-fx-text-fill: white;"/>
-        </HBox>
-    </bottom>
 </BorderPane>

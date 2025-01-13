@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.courses.AddCourseController"
+            prefHeight="450.0" prefWidth="600.0">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Title Section -->
+        <Label text="Add New Course" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+        <!-- Form Section -->
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
+
+            <!-- Course Name -->
+            <Label text="Course Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="250"/>
+
+        </GridPane>
+
+        <!-- Submit Button -->
+        <Button text="Add Course" onAction="#handleCourseCreationAction" fx:id="enrollButton" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
+
+    </VBox>
+
+</AnchorPane>

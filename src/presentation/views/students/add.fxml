@@ -6,41 +6,54 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="presentation.controllers.students.AddStudentController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="450.0" prefWidth="600.0">
 
-    <GridPane hgap="10" vgap="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
-        <!-- First Name -->
-        <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-        <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
 
-        <!-- Last Name -->
-        <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-        <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <!-- Title Section -->
+        <Label text="Enroll New Student" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
 
-        <!-- Date of Birth -->
-        <Label text="Date of Birth:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-        <DatePicker fx:id="dobPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <!-- Form Section -->
+        <GridPane hgap="15" vgap="15" alignment="CENTER">
 
-        <!-- Course -->
-        <Label text="Course:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-        <ComboBox fx:id="courseComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <!-- First Name -->
+            <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="250"/>
 
-        <!-- Student Type -->
-        <Label text="Student Type:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-        <ComboBox fx:id="studentTypeCombo" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <!-- Last Name -->
+            <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="250"/>
 
-        <!-- Employer -->
-        <HBox fx:id="employerBox" visible="false">
-            <TextField fx:id="employerField" promptText="Employer" />
-        </HBox>
+            <!-- Date of Birth -->
+            <Label text="Date of Birth:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <DatePicker fx:id="dobPicker" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="250"/>
 
-        <!-- Country -->
-        <HBox fx:id="countryBox" visible="false">
-            <TextField fx:id="countryField" promptText="Country" />
-        </HBox>
+            <!-- Course -->
+            <Label text="Course:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <ComboBox fx:id="courseComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="250"/>
+
+            <!-- Student Type -->
+            <Label text="Student Type:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <ComboBox fx:id="studentTypeCombo" GridPane.rowIndex="4" GridPane.columnIndex="1" prefWidth="250"/>
+
+            <!-- Country and Employer -->
+            <Label text="Details:" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-size: 14;"/>
+            <StackPane fx:id="toggleStackPane" GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER_LEFT" prefWidth="250">
+                <HBox fx:id="employerBox" visible="false" managed="false" spacing="10">
+                    <Label text="Employer:"/>
+                    <TextField fx:id="employerField" promptText="Employer" prefWidth="150"/>
+                </HBox>
+                <HBox fx:id="countryBox" visible="false" managed="false" spacing="10">
+                    <Label text="Country:"/>
+                    <TextField fx:id="countryField" promptText="Country" prefWidth="150"/>
+                </HBox>
+            </StackPane>
+
+        </GridPane>
 
         <!-- Submit Button -->
-        <Button text="Enroll" fx:id="enrollButton" GridPane.rowIndex="8" GridPane.columnIndex="1" onAction="#handleEnrollAction"/>
-    </GridPane>
+        <Button text="Enroll" onAction="#handleEnrollAction" fx:id="enrollButton" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
+
+    </VBox>
 
 </AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.tutors.TutorListController"
+            prefHeight="600.0" prefWidth="900.0">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+
+        <!-- Title -->
+        <Label text="Tutor List" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+        <!-- Table -->
+        <TableView fx:id="tutorsTable" prefWidth="860.0" prefHeight="500.0">
+            <columns>
+                <TableColumn fx:id="tutorFirstNameColumn" text="First Name" prefWidth="200.0"/>
+                <TableColumn fx:id="tutorLastNameColumn" text="Last Name" prefWidth="200.0"/>
+                <TableColumn fx:id="tutorEmailColumn" text="Email" prefWidth="250.0"/>
+                <TableColumn fx:id="tutorCoursesTaughtColumn" text="Courses Taught" prefWidth="200.0"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>

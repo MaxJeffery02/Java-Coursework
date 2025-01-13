@@ -3,22 +3,13 @@ package presentation;
 import java.io.IOException;
 import java.net.URL;
 
-import application.exceptions.ViewNotFoundException;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
-
 import javafx.application.Application;
-import javafx.stage.StageStyle;
-import javafx.util.Duration;
+import application.exceptions.ViewNotFoundException;
+
 import presentation.controllers.shared.LayoutController;
 
 public class Main extends Application {
@@ -71,7 +62,7 @@ public class Main extends Application {
             layoutController.setContent(viewContent);
 
             // Set the scene with the layout
-            Scene scene = new Scene(layoutRoot, 800, 600);
+            Scene scene = new Scene(layoutRoot, 1200, 800);
             primaryStage.setScene(scene);
             primaryStage.setTitle(viewName.toLowerCase());
             primaryStage.show();
@@ -80,7 +71,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
 
     /**
      * The main method is the entry point for the JavaFX application.

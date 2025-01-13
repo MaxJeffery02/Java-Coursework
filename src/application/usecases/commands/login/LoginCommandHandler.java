@@ -41,7 +41,8 @@ public final class LoginCommandHandler implements CommandHandler<LoginCommand, L
         if (validationResult.isFailure()) {
             return new ErrorResult<>(
                     validationResult.getMessageFromErrorResult(),
-                    validationResult.getStatusCodeFromErrorResult());
+                    validationResult.getStatusCodeFromErrorResult()
+            );
         }
 
         // Try and find user by username

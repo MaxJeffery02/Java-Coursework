@@ -8,7 +8,5 @@ import application.abstractions.Command;
 public record CreateTutorCommand(
         String firstName,
         String lastName,
-        String password,
         LocalDate dateOfBirth,
-        UUID courseId,
         List<UUID> courses) implements Command<UUID> { }

@@ -8,6 +8,11 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.StackPane;
+import presentation.Main;
+import presentation.components.CourseNavbarItem;
+import presentation.components.ExitNavbarItem;
+import presentation.components.StudentNavbarItem;
+import presentation.components.TutorNavbarItem;
 
 public class LayoutController {
 
@@ -32,31 +37,28 @@ public class LayoutController {
     public void populateMenu() {
         menuBar.getMenus().clear();
 
-        Menu fileMenu = new Menu("File");
-        MenuItem exitItem = new MenuItem("Exit");
-        exitItem.setOnAction(event -> System.exit(0));
-        fileMenu.getItems().add(exitItem);
-
-        Menu viewMenu = new Menu("View");
-
         Claim userTypeClaim = sessionManager.getClaim(ClaimTypes.USER_TYPE);
 
-        if(sessionManager.isLoggedIn() && userTypeClaim != null){
+        if (sessionManager.isLoggedIn() && userTypeClaim != null) {
             String userType = userTypeClaim.value().toLowerCase();
 
             if (userType.equals("admin")) {
-                MenuItem adminDashboard = new MenuItem("Admin Dashboard");
-                viewMenu.getItems().add(adminDashboard);
+                menuBar.getMenus().addAll(
+                        new StudentNavbarItem().getMenu(),
+                        new TutorNavbarItem().getMenu(),
+                        new CourseNavbarItem().getMenu()
+                );
             }
 
-            if (userType.equals("user") || userType.equals("admin")) {
-                MenuItem userDashboard = new MenuItem("User Dashboard");
-                viewMenu.getItems().add(userDashboard);
+            if(userType.equals("tutor")){
+            }
+
+            if(userType.equals("student")){
             }
         }
 
         // Add Menus to the MenuBar
-        menuBar.getMenus().addAll(fileMenu, viewMenu);
+        menuBar.getMenus().add(new ExitNavbarItem().getMenu());
     }
 
     /**

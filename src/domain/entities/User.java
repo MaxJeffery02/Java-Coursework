@@ -68,9 +68,9 @@ public class User extends Entity {
 
     public String getView() {
         return switch (type){
-            case STUDENT -> "student/dashboard";
-            case ADMIN -> "admin/dashboard";
-            case TUTOR -> "tutor/dashboard";
+            case STUDENT -> "student/timetable";
+            case ADMIN -> "students/list";
+            case TUTOR -> "tutor/courses";
         };
     }
 

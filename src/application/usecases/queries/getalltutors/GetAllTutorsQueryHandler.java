@@ -7,6 +7,7 @@ import application.mappers.TutorDtoMapper;
 import application.results.Result;
 import application.results.SuccessResult;
 import domain.entities.User;
+import domain.enums.UserType;
 import infrastructure.database.DbContext;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public final class GetAllTutorsQueryHandler implements QueryHandler<GetAllTutors
     public Result<List<TutorDto>> handle(GetAllTutorsQuery query) {
 
         List<TutorDto> tutors = DB_CONTEXT.getUsers()
+                .where(u -> u.getType().equals(UserType.TUTOR))
                 .map(MAPPER::map);
 
         return new SuccessResult<>(tutors);

@@ -8,10 +8,20 @@
             prefHeight="400.0" prefWidth="600.0">
 
     <!-- Center VBox for form -->
-    <VBox layoutX="200.0" layoutY="100.0" spacing="10.0" alignment="CENTER">
-        <Label text="Login" styleClass="title" />
-        <TextField fx:id="usernameField" promptText="Username" />
-        <PasswordField fx:id="passwordField" promptText="Password" />
-        <Button text="Login" onAction="#handleLogin" />
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+        <!-- Title -->
+        <Label text="Login" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+        <!-- Username Field -->
+        <TextField fx:id="usernameField" promptText="Username" prefWidth="300" style="-fx-font-size: 14;"/>
+
+        <!-- Password Field -->
+        <PasswordField fx:id="passwordField" promptText="Password" prefWidth="300" style="-fx-font-size: 14;"/>
+
+        <!-- Login Button -->
+        <Button text="Login" onAction="#handleLogin" prefWidth="150" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
+
+        <!-- Optional Footer -->
+        <Label text="Forgot your password? Contact support." style="-fx-font-size: 12; -fx-text-fill: gray;"/>
     </VBox>
 </AnchorPane>

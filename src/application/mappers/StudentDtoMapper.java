@@ -37,6 +37,7 @@ public class StudentDtoMapper implements Mapper<User, StudentDto> {
             return new StudentDto(
                     student.getFirstName(),
                     student.getLastName(),
+                    student.getEmail(),
                     student.getCourse().getName(),
                     student.getStudentType().toString(),
                     employer,
