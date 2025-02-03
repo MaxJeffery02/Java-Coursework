@@ -82,7 +82,7 @@ public final class LoginCommandHandler implements CommandHandler<LoginCommand, L
         // Add tutor claims if a user is a tutor
         if(user instanceof Tutor tutor){
             tutor.getCoursesTaught().forEach(c -> {
-                claims.add(new Claim(ClaimTypes.COURSE_ID, c.toString()));
+                claims.add(new Claim(ClaimTypes.COURSE_ID, c.getId().toString()));
             });
         }
 

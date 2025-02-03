@@ -53,6 +53,11 @@ public class SessionManager {
         return claims.stream().filter(c -> c.type().equals(claimType)).findFirst().orElse(null);
     }
 
+    public  synchronized List<Claim> getClaims(String claimType) {
+        if (claims == null) return null;
+        return claims.stream().filter(c -> c.type().equals(claimType)).toList();
+    }
+
     /**
      * Clear the session by removing all claims
      */

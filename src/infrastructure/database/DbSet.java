@@ -3,6 +3,7 @@ package infrastructure.database;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import domain.abstractions.Entity;
 import domain.entities.User;
 import domain.helpers.LocalDateAdapter;
 import domain.helpers.UserDeserializer;
@@ -23,7 +24,7 @@ import java.util.stream.Stream;
  * with a collection of entities stored in a JSON file. It provides methods
  * for CRUD operations and querying capabilities such as filtering and mapping.
  */
-public class DbSet<T> {
+public class DbSet<T extends Entity> {
 
     // Gson instance for serialization and deserialization
     private final Gson GSON;
@@ -102,7 +103,7 @@ public class DbSet<T> {
      * @param entity The entity to remove.
      */
     public void remove(T entity) {
-        this.ITEMS.remove(entity);
+        ITEMS.removeIf(i -> i.getId().equals(entity.getId()));
         saveToJson();
     }
 

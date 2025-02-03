@@ -1,1 +1,182 @@
-[{"username":"MJEFFER","firstName":"Max","lastName":"Jeffery","type":"ADMIN","dateOfBirth":"2002-11-16","password":{"hash":"my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d","salt":"k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"},"id":"e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"},{"employer":"IDK","course":{"name":"Computer Science","id":"ea3f4e69-3787-45c7-91b2-35b60fc1be3d"},"studentType":"APPRENTICE","username":"JCARR","firstName":"James","lastName":"Carr","type":"STUDENT","dateOfBirth":"2001-12-05","password":{"hash":"G8ITd/HokFID0lTgqEFuUartlIMeulX/yhFPkcrvZZKzeew7xdDSyupzGuPdaGdI1IQA99cy4nSMxZ7v22vSFg\u003d\u003d","salt":"ADcQlekZloi5E1GyPyeWcw\u003d\u003d"},"id":"e3474d36-279d-4b04-ab42-137d3978c832"},{"course":{"name":"Economics","id":"3fa4fe79-9df8-4ff0-94d1-2cd90d9023b0"},"studentType":"FULL_TIME","username":"RDAVID","firstName":"Ralph","lastName":"David","type":"STUDENT","dateOfBirth":"1997-03-14","password":{"hash":"ppXfQFC6e86aWaUnO8GwwmOrgLUeFziPGQG4BHLvlmFLYbHiSJ3Z+wweasVDKFOwyXtTO/pD7+8sIa91761CNg\u003d\u003d","salt":"nnEUqetu+0uCo3qFb5Ajhg\u003d\u003d"},"id":"e55afbda-ed65-472e-982c-f9a8f2dbd172"},{"employer":"Blueteq","course":{"name":"Computer Science","id":"ea3f4e69-3787-45c7-91b2-35b60fc1be3d"},"studentType":"APPRENTICE","username":"MJEFFER2","firstName":"Max","lastName":"Jeffery","type":"STUDENT","dateOfBirth":"1996-10-03","password":{"hash":"7M2ZB4RIOAXXYU8SPiMuJarMnpIzIl5MxfwIohUAIKLcpukzGqmOCL85HPjHVnYdytZ0tqOIjG9NlDJswsebQA\u003d\u003d","salt":"T+TRj0AvIH2Il1sJoZStEg\u003d\u003d"},"id":"76c1fc45-a289-47f5-88bb-9f2ef93c3e26"},{"course":{"name":"Literature","id":"c44e2080-72f7-462a-bfb5-7d2cf1a9e5b4"},"studentType":"FULL_TIME","username":"GCROMPT","firstName":"Georgia","lastName":"Crompton","type":"STUDENT","dateOfBirth":"2004-03-05","password":{"hash":"ZRIaowdsfz+gMtQya0xMowvECWLD/k8dljtm45egJjLx+lH3pWgy6mfxK81evYLDToRmk/KfCDPIANvivHJNtA\u003d\u003d","salt":"mAXGDy5lhMvXqFSPoE9Qlg\u003d\u003d"},"id":"045d1592-c05b-4a6d-a638-f4df8178d4ec"},{"employer":"Blueteq","course":{"name":"Computer Science","id":"ea3f4e69-3787-45c7-91b2-35b60fc1be3d"},"studentType":"APPRENTICE","username":"MJEFFER3","firstName":"Max","lastName":"Jeffery","type":"STUDENT","dateOfBirth":"2002-11-16","password":{"hash":"4pinBC0KS6stI4H8JyTTI7Nwx1A1pA3k0iM1PF8k4dA7rUzG7F6u7JSh0YBlP4yoL+rD6asV0oGYe7SkDgzgBw\u003d\u003d","salt":"bMcYUZAJBvImdIBnlOzZCw\u003d\u003d"},"id":"1c826437-14ce-46b1-a8a2-c33d43c4cc19"},{"country":"Japan","course":{"name":"Biology","id":"a07c6f7b-920f-46f9-b7d3-303227a6b02e"},"studentType":"FOREIGN_EXCHANGE","username":"MJEFFER4","firstName":"Max","lastName":"Jeffery","type":"STUDENT","dateOfBirth":"2002-01-01","password":{"hash":"BKLeo3dj6SaDn6iI0fEfBsVrnJWcm6a8Vv+O/PP7KEZpkLZfhu2qJZ48As+RK+j5xmMuk/BulKi4w/1lrIlhTQ\u003d\u003d","salt":"VjnIMi6Jd93b9l9TXWvY5g\u003d\u003d"},"id":"01acdc35-d912-4210-9ca9-f85ce7f2259d"},{"coursesTaught":[{"name":"Mathematics","id":"1f36f0f5-869d-4297-93a7-c3d3cd1dbed6"},{"name":"Computer Science","id":"ea3f4e69-3787-45c7-91b2-35b60fc1be3d"}],"username":"JSMITH","firstName":"John","lastName":"Smith","type":"TUTOR","dateOfBirth":"1983-01-05","password":{"hash":"WfFJVcfUyhJUonWTucgRxP9w9Q93/Ytc+DK9vL4x178Qq+DAq0mYrDoUjvU6tOe/sb1ceOnmMZd4E7IXfWF5OA\u003d\u003d","salt":"CECH29PLgDV+E5Exfmq2OA\u003d\u003d"},"id":"1b557828-d4c2-4ceb-885e-8a1a016e4e85"}]
+[
+  {
+    "username": "MJEFFER",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "ADMIN",
+    "dateOfBirth": "2002-11-16",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e2d20d8d-291d-4ffd-a1d0-6dfd5e720fab"
+  },
+  {
+    "employer": "IDK",
+    "course": {
+      "name": "Computer Science",
+      "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d"
+    },
+    "studentType": "APPRENTICE",
+    "username": "JCARR",
+    "firstName": "James",
+    "lastName": "Carr",
+    "type": "STUDENT",
+    "dateOfBirth": "2001-12-05",
+    "password": {
+      "hash": "G8ITd/HokFID0lTgqEFuUartlIMeulX/yhFPkcrvZZKzeew7xdDSyupzGuPdaGdI1IQA99cy4nSMxZ7v22vSFg\u003d\u003d",
+      "salt": "ADcQlekZloi5E1GyPyeWcw\u003d\u003d"
+    },
+    "id": "e3474d36-279d-4b04-ab42-137d3978c832"
+  },
+  {
+    "course": {
+      "name": "Literature",
+      "id": "c44e2080-72f7-462a-bfb5-7d2cf1a9e5b4"
+    },
+    "studentType": "FULL_TIME",
+    "username": "GCROMPT",
+    "firstName": "Georgia",
+    "lastName": "Crompton",
+    "type": "STUDENT",
+    "dateOfBirth": "2004-03-05",
+    "password": {
+      "hash": "ZRIaowdsfz+gMtQya0xMowvECWLD/k8dljtm45egJjLx+lH3pWgy6mfxK81evYLDToRmk/KfCDPIANvivHJNtA\u003d\u003d",
+      "salt": "mAXGDy5lhMvXqFSPoE9Qlg\u003d\u003d"
+    },
+    "id": "045d1592-c05b-4a6d-a638-f4df8178d4ec"
+  },
+  {
+    "country": "Japan",
+    "course": {
+      "name": "Biology",
+      "id": "a07c6f7b-920f-46f9-b7d3-303227a6b02e"
+    },
+    "studentType": "FOREIGN_EXCHANGE",
+    "username": "MJEFFER4",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2002-01-01",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "01acdc35-d912-4210-9ca9-f85ce7f2259d"
+  },
+  {
+    "coursesTaught": [
+      {
+        "name": "Mathematics",
+        "id": "1f36f0f5-869d-4297-93a7-c3d3cd1dbed6"
+      },
+      {
+        "name": "Computer Science",
+        "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d"
+      }
+    ],
+    "username": "JSMITH",
+    "firstName": "John",
+    "lastName": "Smith",
+    "type": "TUTOR",
+    "dateOfBirth": "1983-01-05",
+    "password": {
+      "hash": "WfFJVcfUyhJUonWTucgRxP9w9Q93/Ytc+DK9vL4x178Qq+DAq0mYrDoUjvU6tOe/sb1ceOnmMZd4E7IXfWF5OA\u003d\u003d",
+      "salt": "CECH29PLgDV+E5Exfmq2OA\u003d\u003d"
+    },
+    "id": "1b557828-d4c2-4ceb-885e-8a1a016e4e85"
+  },
+  {
+    "coursesTaught": [
+      {
+        "name": "Mathematics",
+        "id": "1f36f0f5-869d-4297-93a7-c3d3cd1dbed6"
+      },
+      {
+        "name": "Computer Science",
+        "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d"
+      },
+      {
+        "name": "Physics",
+        "id": "b13e3a0e-e43f-4edb-9311-4d63d5008c9c"
+      },
+      {
+        "name": "Chemistry",
+        "id": "9f5b2d8a-9b6e-4552-a00f-4e6b84f1c0ae"
+      },
+      {
+        "name": "Biology",
+        "id": "a07c6f7b-920f-46f9-b7d3-303227a6b02e"
+      },
+      {
+        "name": "Engineering",
+        "id": "3ab5d7d2-3f28-470d-97b2-63be4728b16a"
+      },
+      {
+        "name": "Statistics",
+        "id": "d98c68d5-0135-43a7-91ae-f9259d0d72e4"
+      },
+      {
+        "name": "Economics",
+        "id": "3fa4fe79-9df8-4ff0-94d1-2cd90d9023b0"
+      },
+      {
+        "name": "Literature",
+        "id": "c44e2080-72f7-462a-bfb5-7d2cf1a9e5b4"
+      },
+      {
+        "name": "History",
+        "id": "f39d33e0-f535-4e1f-bc66-f1e315db5e55"
+      },
+      {
+        "name": "Software Development",
+        "id": "c4987780-c065-4fe5-89be-477e4c5bc1cb"
+      }
+    ],
+    "username": "MJEFFER5",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "TUTOR",
+    "dateOfBirth": "1981-01-08",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "454cc991-fef0-4e0b-8a68-59c9ebff8f66"
+  },
+  {
+    "employer": "Blueteq",
+    "course": {
+      "name": "Computer Science",
+      "id": "ea3f4e69-3787-45c7-91b2-35b60fc1be3d"
+    },
+    "studentType": "APPRENTICE",
+    "username": "MJEFFER2",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "1996-10-03",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "76c1fc45-a289-47f5-88bb-9f2ef93c3e26"
+  },
+  {
+    "course": {
+      "name": "Literature",
+      "id": "c44e2080-72f7-462a-bfb5-7d2cf1a9e5b4"
+    },
+    "studentType": "FULL_TIME",
+    "username": "MJEFFER6",
+    "firstName": "Max",
+    "lastName": "Jeffery",
+    "type": "STUDENT",
+    "dateOfBirth": "2004-03-05",
+    "password": {
+      "hash": "my6yggmRAh7GhK3sodE4OPDgAbYyhjy3BgAZpn0Za57/eeGWpcesiNGZv2qUbeKwZHur8nXitYSFE339cvUcgw\u003d\u003d",
+      "salt": "k4AmX4nhR0mWFXhS/HnFOw\u003d\u003d"
+    },
+    "id": "e55afbda-ed65-472e-982c-f9a8f2dbd172"
+  }
+]

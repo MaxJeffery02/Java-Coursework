@@ -9,10 +9,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.StackPane;
 import presentation.Main;
-import presentation.components.CourseNavbarItem;
-import presentation.components.ExitNavbarItem;
-import presentation.components.StudentNavbarItem;
-import presentation.components.TutorNavbarItem;
+import presentation.components.*;
 
 public class LayoutController {
 
@@ -46,7 +43,8 @@ public class LayoutController {
                 menuBar.getMenus().addAll(
                         new StudentNavbarItem().getMenu(),
                         new TutorNavbarItem().getMenu(),
-                        new CourseNavbarItem().getMenu()
+                        new CourseNavbarItem().getMenu(),
+                        new ModuleNavbarItem().getMenu()
                 );
             }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.students.TimetableController"
+            prefHeight="450.0" prefWidth="600.0">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Title Section -->
+        <Label fx:id="title" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+        <!-- Table Section -->
+        <TableView fx:id="timetableTable" prefWidth="550" prefHeight="350">
+            <columns>
+                <TableColumn text="Day" fx:id="dayColumn" minWidth="80"/>
+                <TableColumn text="Module" fx:id="moduleColumn" minWidth="180"/>
+                <TableColumn text="Start Time" fx:id="startTimeColumn" minWidth="100"/>
+                <TableColumn text="End Time" fx:id="endTimeColumn" minWidth="100"/>
+            </columns>
+        </TableView>
+
+        <!-- Bottom Section (Optional - Actions or Navigation) -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Previous" fx:id="prevButton" style="-fx-font-size: 14; -fx-padding: 8 15;"/>
+            <Button text="Next" fx:id="nextButton" style="-fx-font-size: 14; -fx-padding: 8 15;"/>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

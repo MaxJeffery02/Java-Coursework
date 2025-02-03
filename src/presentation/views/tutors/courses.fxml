@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presentation.controllers.tutors.TutorsCoursesController"
+            prefHeight="600.0" prefWidth="900.0">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0">
+
+        <!-- Title -->
+        <Label text="Your Courses" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+        <!-- Table -->
+        <TableView fx:id="tutorsTable" prefWidth="860.0" prefHeight="500.0">
+            <columns>
+                <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="200.0"/>
+                <TableColumn fx:id="modulesColumn" text="Modules" prefWidth="400.0"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>

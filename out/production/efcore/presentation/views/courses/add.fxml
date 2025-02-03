@@ -23,7 +23,7 @@
         </GridPane>
 
         <!-- Submit Button -->
-        <Button text="Add Course" onAction="#handleCourseCreationAction" fx:id="enrollButton" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
+        <Button text="Add Course" onAction="#handleCourseCreationAction" style="-fx-font-size: 14; -fx-padding: 10 20;"/>
 
     </VBox>
 

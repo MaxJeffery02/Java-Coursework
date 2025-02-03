@@ -62,7 +62,7 @@ public class Main extends Application {
             layoutController.setContent(viewContent);
 
             // Set the scene with the layout
-            Scene scene = new Scene(layoutRoot, 1200, 800);
+            Scene scene = new Scene(layoutRoot, 1200, 900);
             primaryStage.setScene(scene);
             primaryStage.setTitle(viewName.toLowerCase());
             primaryStage.show();
