@@ -11,7 +11,7 @@
     <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
 
         <!-- Title Section -->
-        <Label text="Add New Course" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+        <Label text="Add New Module" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
 
         <!-- Form Section -->
         <GridPane hgap="15" vgap="15" alignment="CENTER">
